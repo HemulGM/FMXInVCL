@@ -1,0 +1,126 @@
+object FormFMX: TFormFMX
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 642
+  ClientWidth = 1013
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Viewport3D1: TViewport3D
+    Align = Client
+    Color = xFF434343
+    Size.Width = 764.000000000000000000
+    Size.Height = 642.000000000000000000
+    Size.PlatformDefault = False
+    object Rectangle3D1: TRectangle3D
+      RotationAngle.Y = 1.367902636528015000
+      Width = 4.000000000000000000
+      Height = 3.067292213439941000
+      Depth = 7.076595306396484000
+      TwoSide = True
+      CornerType = Round
+      Flatness = 10.000000000000000000
+      Sides = [Front, Back, Shaft]
+      MaterialBackSource = LightMaterialSource1
+      MaterialShaftSource = LightMaterialSource1
+      MaterialSource = LightMaterialSource1
+      Quanternion = '(0,0.0119358422234654,0,0.999928653240204)'
+      object FloatAnimation1: TFloatAnimation
+        AnimationType = InOut
+        AutoReverse = True
+        Enabled = True
+        Duration = 6.000000000000000000
+        Interpolation = Back
+        Loop = True
+        PropertyName = 'RotationAngle.Y'
+        StartValue = 0.000000000000000000
+        StopValue = 360.000000000000000000
+      end
+    end
+    object Light1: TLight
+      Color = claWhite
+      LightType = Point
+      SpotCutOff = 180.000000000000000000
+      Position.X = 3.912522315979004000
+      Position.Y = -1.905114889144897000
+      Position.Z = -8.165097236633301000
+      RotationAngle.Y = 331.264648437500000000
+      Width = 1.000000000000000000
+      Height = 1.000000000000000000
+      Depth = 1.000000000000000000
+      Quanternion = '(0,0.248143702745438,0,-0.968723237514496)'
+    end
+  end
+  object Layout1: TLayout
+    Align = Left
+    Size.Width = 249.000000000000000000
+    Size.Height = 642.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object Edit1: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 0
+      Position.X = 16.000000000000000000
+      Position.Y = 40.000000000000000000
+      Size.Width = 217.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label1: TLabel
+      Position.X = 16.000000000000000000
+      Position.Y = 16.000000000000000000
+      Text = 'Label1'
+      TabOrder = 1
+    end
+    object Memo1: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      Position.X = 16.000000000000000000
+      Position.Y = 72.000000000000000000
+      Size.Width = 217.000000000000000000
+      Size.Height = 145.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Viewport.Width = 213.000000000000000000
+      Viewport.Height = 141.000000000000000000
+    end
+    object Button1: TButton
+      Hint = 'hfghfgh'
+      Position.X = 152.000000000000000000
+      Position.Y = 224.000000000000000000
+      TabOrder = 3
+      Text = 'Button1'
+      ParentShowHint = False
+      ShowHint = True
+    end
+    object ComboBox1: TComboBox
+      Items.Strings = (
+        '1'
+        '2'
+        '3'
+        '4'
+        '5'
+        '6'
+        '7'
+        '8')
+      ItemIndex = 0
+      Position.X = 16.000000000000000000
+      Position.Y = 256.000000000000000000
+      Size.Width = 217.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+    end
+  end
+  object LightMaterialSource1: TLightMaterialSource
+    Diffuse = xFF848484
+    Ambient = xFF0098DC
+    Emissive = x6E000000
+    Specular = xFF0095FF
+    Shininess = 30
+    Left = 456
+    Top = 72
+  end
+end

@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{3E361A54-AF8F-48C1-B500-4EE02EC0AE01}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="VCLApp.dproj">
+            <Dependencies>..\FMX\FMXDLL.dproj</Dependencies>
+        </Projects>
+        <Projects Include="..\FMX\FMXApp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\FMX\FMXDLL.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="VCLApp" DependsOnTargets="FMXDLL">
+        <MSBuild Projects="VCLApp.dproj"/>
+    </Target>
+    <Target Name="VCLApp:Clean" DependsOnTargets="FMXDLL:Clean">
+        <MSBuild Projects="VCLApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="VCLApp:Make" DependsOnTargets="FMXDLL:Make">
+        <MSBuild Projects="VCLApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FMXApp">
+        <MSBuild Projects="..\FMX\FMXApp.dproj"/>
+    </Target>
+    <Target Name="FMXApp:Clean">
+        <MSBuild Projects="..\FMX\FMXApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FMXApp:Make">
+        <MSBuild Projects="..\FMX\FMXApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FMXDLL">
+        <MSBuild Projects="..\FMX\FMXDLL.dproj"/>
+    </Target>
+    <Target Name="FMXDLL:Clean">
+        <MSBuild Projects="..\FMX\FMXDLL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FMXDLL:Make">
+        <MSBuild Projects="..\FMX\FMXDLL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="VCLApp;FMXApp;FMXDLL"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="VCLApp:Clean;FMXApp:Clean;FMXDLL:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="VCLApp:Make;FMXApp:Make;FMXDLL:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
