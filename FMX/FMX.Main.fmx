@@ -83,8 +83,8 @@ object FormFMX: TFormFMX
       Size.Height = 145.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 2
-      Viewport.Width = 213.000000000000000000
-      Viewport.Height = 141.000000000000000000
+      Viewport.Width = 217.000000000000000000
+      Viewport.Height = 145.000000000000000000
     end
     object Button1: TButton
       Hint = 'hfghfgh'

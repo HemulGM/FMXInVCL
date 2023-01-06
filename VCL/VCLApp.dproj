@@ -103,7 +103,6 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="..\FMX\FMX.FormIntf.pas"/>
-        <DCCReference Include="FMXContainer.pas"/>
         <DCCReference Include="VCL.Test.pas">
             <Form>Form1</Form>
             <FormType>dfm</FormType>
